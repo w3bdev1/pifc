@@ -1,8 +1,9 @@
-;;; pifc.el --- Paste Image From Clipboard in Emacs Org-Mode or Markdown-Mode                        -*- lexical-binding: t; -*-
+;;; pifc.el --- Paste Image From Clipboard in Org-Mode or Markdown-Mode                        -*- lexical-binding: t; -*-
 
 ;; Author: W3b Dev <w3bdev@protonmail.com>
 ;; Homepage: https://github.com/w3bdev1/pifc
 ;; Version: 1.0
+;; Package-Requires: ((emacs "25.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -17,18 +18,17 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-;;; Commentary
-;; It allows to paste image from clipboard
-;; to org or markdown file.
-;; The images are saved in the path specified
-;; in pifc-relative-path variable relative
-;; to the current buffer.
+;;; Commentary:
+
+;; It allows to paste image from clipboard to org or markdown file.
+;; The images are saved in the path specified in pifc-relative-path
+;; variable relative to the current buffer.
 
 
-;;; Code
+;;; Code:
 
 (defvar pifc-relative-path "./_resources"
-  "It is the relative path with respect to current buffer where pifc saves clipboard messages")
+  "It is the relative path with respect to current buffer where pifc saves clipboard messages.")
 
 ;;;###autoload
 (defun org-paste-image-from-clipboard ()
